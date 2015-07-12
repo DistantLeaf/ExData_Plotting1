@@ -1,6 +1,6 @@
 plot3 <- function() {
-  # This function will import the "Household Power Consumption" data and plot the Global Active 
-  # Power (kilowatts) over the period of the 1st and 2nd of February 2007
+  # This function will import the "Household Power Consumption" data and plot the different 
+  # sub metering data for the 1st and 2nd of February 2007. It will add a legend as well
   
   # Load all data from the text file, using a static file location, but this can be changed 
   # into a variable for the plot2 function
