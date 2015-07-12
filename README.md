@@ -1,4 +1,6 @@
-## Introduction
+## I have forked this repository to contain all my plotX.R files and plotX.png files... heppy reviewing... Chris
+
+# Introduction
 
 This assignment uses data from
 the <a href="http://archive.ics.uci.edu/ml/">UC Irvine Machine
