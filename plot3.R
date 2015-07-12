@@ -14,6 +14,10 @@ plot3 <- function() {
   # the POSIXct funtion. This also converts from the character format into the date/time format
   febdata$DateTime <- as.POSIXct(paste(febdata$Date, febdata$Time), format="%d/%m/%Y %H:%M:%S")
   
+  # Rstudio was giving problems with the legend placement, therefore I switched to the PNG device
+  # This worked well... ;) - The default is 480x480 pixels, therefore there's not need to set it.
+  png(file = "plot3.png")
+  
   # Create the line graph based on the sample given
   plot(febdata$DateTime, febdata$Sub_metering_1, type = "l", xlab = "", 
        ylab = "Energy sub metering")
@@ -23,13 +27,10 @@ plot3 <- function() {
   lines(febdata$DateTime, febdata$Sub_metering_3, col = "blue")
   
   # Adding the plot to best match the example image
-  legend("topright", lty=c(1,1), lwd=c(2.5,2.5), col = c("black", "red", "blue"), 
+  legend("topright", lty=c(1,1,1), lwd=c(1,1,1), col = c("black", "red", "blue"), 
          legend = c("Sub_metering_1", "Sub_metering_2","Sub_metering_3"), 
-         x.intersp = 0.5, y.intersp = 0.5)
+         x.intersp = 1, y.intersp = 1)
   
-  # Copy the line plots from the screen device (Rstudio), and save it as a PNG file 
-  # Default pixel size is set to 480 by 480
-  dev.copy(png, file = "plot3.png")
   # Turn the grahic device off
   dev.off()
   
