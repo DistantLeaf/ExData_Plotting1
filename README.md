@@ -1,4 +1,4 @@
-## I have forked this repository to contain all my plotX.R files and plotX.png files... happy reviewing... Chris
+## I have forked this repository to contain all my plotX.R files and plotX.png files... Thanks, Chris
 
 # Introduction
 
